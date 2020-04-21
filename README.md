@@ -2,7 +2,10 @@
 
 # SMS FETCHER
 A Flutter Package that makes retrieving of SMS easier from your android phone.
-NB: Doesn't support iOS due to Apple's Privacy Concerns. See link below for more info:
+
+# NB:
+
+Doesn't support iOS due to Apple's Privacy Concerns. See link below for more info:
 [link](https://stackoverflow.com/questions/16187841/read-sms-message-in-ios)
 
 ## Widgets
