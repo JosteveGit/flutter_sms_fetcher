@@ -5,25 +5,65 @@ A Flutter Package that makes retrieving of SMS easier from your android phone.
 NB: Doesn't support iOS due to Apple's Privacy Concerns. See link below for more info:
 https://stackoverflow.com/questions/16187841/read-sms-message-in-ios
 
+Widgets
+smsfetcher - retrieves a list of sms from your phone
 
-Installing
-1. Add dependency to pubspec.yaml
+Example
 
-Get the latest version in the 'Installing' tab on pub.dev
+import 'package:flutter/material.dart';
+import 'dart:async';
 
-dependencies:
-    flutter_sms_fetcher: 
-    
-2. Import the package
-import 'package:flutter_sms_fetcher/flutter_sms_fetcher.dart';
+import 'package:flutter/services.dart';
+import 'package:smsfetcher/smsfetcher.dart';
 
-## Getting Started
+void main() {
+  runApp(MyApp());
+}
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+class _MyAppState extends State<MyApp> {
+  List<Sms> _smsList;
+
+
+  Future<void> fetchSms() async {
+    List<Sms> smsList;
+    try {
+      smsList = await Smsfetcher.getSms();
+    }on PlatformException{
+      print("Error");
+    }
+    setState(() {
+      _smsList = smsList;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Sms Fetcher'),
+        ),
+        body: Center(
+          child: Column(
+            children: <Widget>[
+              Text('$_smsList'),
+              RaisedButton(
+                onPressed: (){
+                  fetchSms();
+                },
+                child: Text("Fetch sms"),
+                color: Colors.orange,
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
