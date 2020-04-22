@@ -7,6 +7,7 @@ flutter_sms_fetcher doesn't support iOS due to Apple's Privacy Concerns. See lin
 
 ## Usage
 Add the following permissions to your AndroidManifest.xml file
+
 ```<uses-permission android:name="android.permission.READ_SMS"/>```
 
 ## Example
