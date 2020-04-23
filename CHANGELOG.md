@@ -4,7 +4,7 @@
 ## 1.0.0
 
 Package Initialization
-* Includes `SMSFetcher` that retrieves a list of SMS from your android phone
+* Includes `SMSFetcher` - That retrieves a list of SMS from your android phone
 
 ## 1.0.1
 Package Initialization
