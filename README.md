@@ -71,4 +71,4 @@ class _MyAppState extends State<MyApp> {
 ```
 ## Contributors
 [Josteve Adekanbi](https://github.com/JosteveGit) and 
-[Momoh Herodion](https://github.com/mhero007)
+[Momoh Hero](https://github.com/mhero007)
