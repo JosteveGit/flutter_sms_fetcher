@@ -2,7 +2,7 @@ name: smsfetcher
 description: SMSFetcher is a flutter library that makes retrieval of sms from android phone easy.
 version: 1.0.0
 author:
-homepage: 
+homepage: https://github.com/JosteveGit/flutter_sms_fetcher
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
