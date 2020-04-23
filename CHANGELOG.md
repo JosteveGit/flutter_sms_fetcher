@@ -6,11 +6,3 @@
 Package Initialization
 * Includes `SMSFetcher` - That retrieves a list of SMS from your android phone
 
-## 1.0.1
-Package Initialization
-* Example maintained
-
-## 1.0.2
-Package Initialization
-* pubspec.yaml updated
-* Readme edit
